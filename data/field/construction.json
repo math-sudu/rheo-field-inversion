@@ -1,0 +1,81 @@
+{
+  "description": "Dated staged construction on the author-approved CAD reference shape",
+  "sections": {
+    "DK0+935": {
+      "monitoring_date": "2023-03-01",
+      "lower_day": 7,
+      "closure_day": 15,
+      "casting_day": 38
+    },
+    "DK0+915": {
+      "monitoring_date": "2023-03-13",
+      "lower_day": 5,
+      "closure_day": 12,
+      "casting_day": 32
+    }
+  },
+  "confirmed_inputs": {
+    "bench_depth_m": 6.0
+  },
+  "assumptions": {
+    "delay_days": 0.5,
+    "support_stiffness_MPa_per_m": 3.82,
+    "support_reference_radius_m": 4.9,
+    "primary_thickness_m": 0.29,
+    "invert_thickness_m": 0.4,
+    "invert_modulus_MPa": 30000.0,
+    "step_days": 2.0
+  },
+  "sources": [
+    {
+      "kind": "author_confirmation",
+      "date": "2026-09-23",
+      "use": "Actual upper-bench height is 6 m; bench interface is 6 m below the inner crown."
+    },
+    {
+      "document": 290,
+      "figures": [
+        20,
+        22
+      ],
+      "archive_figure_ids": [
+        16747,
+        16749
+      ],
+      "use": "Calendar dates, observed targets, three chord depths and monitoring histories; original images checked on 2026-09-23"
+    },
+    {
+      "document": 251,
+      "pdf_pages": [
+        60,
+        61
+      ],
+      "tables": [
+        20,
+        21
+      ],
+      "use": "Actual changed support for 935--915: 29 cm C30 early-strength concrete, I22b at 0.6 m, 5 m bolts; 40 cm lining; combined equivalent pre-secondary-lining support stiffness 3.82 MPa/m"
+    },
+    {
+      "document": 258,
+      "pdf_pages": [
+        194,
+        207
+      ],
+      "tables": [
+        "6.13",
+        "6.24"
+      ],
+      "use": "Corroborates actual changed support, 29 cm shotcrete and 40 cm invert. Table 6.11 stiffness 11.2 MPa/m is a theoretical demand/design quantity, not a measured installed stiffness."
+    }
+  ],
+  "interpretation": {
+    "time": "Event days are exact calendar-date differences. Raw digitized within-day coordinates are retained as graphical abscissae, never reported as observed hours.",
+    "bench": "The author-confirmed 6 m upper-bench height fixes the excavation interface; it is not an inverse parameter.",
+    "support": "EA = 3.82 MPa/m times (4.9 m)^2; EI = EA times (0.29 m)^2 / 12. This effective bonded frame represents the damaged composite support response, not an intact C30 material modulus. Half and twice this stiffness are evaluated without fitting it.",
+    "installation": "Upper arch installed at the assumed first-reading age, lower walls 0.5 day after lower-bench passage, invert initial support on the recorded closure date. Each segment is stress free at installation and shares rotations with installed segments.",
+    "casting": "Only the invert arc gains a 40 cm bonded concrete frame at casting, assuming E=30 GPa and nu=0.2. No unrecorded wall lining or full secondary ring is activated. Omission of this addition tests its influence.",
+    "geometry": "Existing CAD shape and actual target mapping retained. Bench removal is represented by delayed lower-wall confinement release on the final boundary; an interior retained-bench mesh and excavation floor are not resolved.",
+    "weights": "All original 935/915 observations and channel noise scales retained; one constant offset per channel is profiled, with that channel's own first record as its mechanical datum."
+  }
+}
