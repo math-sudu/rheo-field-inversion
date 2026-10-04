@@ -1,0 +1,89 @@
+{
+  "box": {
+    "s_star": [
+      0.005,
+      0.0625
+    ],
+    "K0": [
+      0.69,
+      1.18
+    ],
+    "lam0": [
+      0.35,
+      0.85
+    ],
+    "r_K": [
+      0.1,
+      1.0
+    ],
+    "tau_K": [
+      0.2,
+      50.0
+    ],
+    "tau_M": [
+      50.0,
+      2000.0
+    ],
+    "r_s": [
+      0.05651149649089338,
+      3.0
+    ],
+    "tau_vp": [
+      1.0,
+      300.0
+    ]
+  },
+  "solver": {
+    "max_nfev": 160,
+    "solve_tolerance": 1e-08,
+    "kkt_tolerance": 1e-06,
+    "feasibility_tolerance": 1e-10,
+    "replay_tolerance": 1e-08
+  },
+  "training": {
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "epochs": 2000,
+    "learning_rate": 0.002,
+    "data_weight": 1.0,
+    "correction_weight": 1.0,
+    "stationarity_weight": 0.25,
+    "tangent_weight": 0.0001,
+    "device": "cpu",
+    "weight_decay": 1e-06,
+    "gradient_clip_norm": 10.0,
+    "minimum_lr_fraction": 0.02,
+    "architecture": {
+      "width": 64,
+      "depth": 4,
+      "n_fourier": 4,
+      "embedding_dim": 8
+    }
+  },
+  "initializations": [
+    {
+      "tau_M": 750.0,
+      "s_star": 0.04570400878216152,
+      "K0": 0.7352317055172978,
+      "lam0": 0.8499377487328076,
+      "r_K": 0.900713551337922,
+      "tau_K": 0.20047834613347643,
+      "r_s": 0.7638891896128307,
+      "tau_vp": 1.0961201740079651
+    },
+    {
+      "tau_M": 750.0,
+      "s_star": 0.03704976755537218,
+      "K0": 0.6926138173020728,
+      "lam0": 0.8499173061968064,
+      "r_K": 0.9992207308227372,
+      "tau_K": 7.500274255554792,
+      "r_s": 0.7789008669243869,
+      "tau_vp": 1.0000446274501134
+    }
+  ],
+  "initialization_note": "Starting parameter vectors for the two optimization tracks."
+}

@@ -1,0 +1,2 @@
+# Preserve the exact material/replay sources across Git checkouts.
+runtime/** -text

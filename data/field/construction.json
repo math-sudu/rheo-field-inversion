@@ -1,0 +1,32 @@
+{
+  "description": "Dated excavation and stress-free installation of effective support",
+  "sections": {
+    "DK0+935": {
+      "monitoring_date": "2023-03-01",
+      "lower_day": 7,
+      "closure_day": 15,
+      "casting_day": 38
+    },
+    "DK0+915": {
+      "monitoring_date": "2023-03-13",
+      "lower_day": 5,
+      "closure_day": 12,
+      "casting_day": 32
+    }
+  },
+  "confirmed_inputs": {
+    "bench_depth_m": 6.0
+  },
+  "assumptions": {
+    "delay_days": 0.5,
+    "support_stiffness_MPa_per_m": 3.82,
+    "support_reference_radius_m": 4.9,
+    "primary_thickness_m": 0.29,
+    "invert_thickness_m": 0.4,
+    "invert_modulus_MPa": 30000.0,
+    "step_days": 2.0
+  },
+  "installation": "Upper arch at the first-reading age; lower walls 0.5 d after lower-bench passage; primary invert at ring closure; concrete invert at casting.",
+  "geometry": "Lower-bench excavation is represented by delayed traction release on the final reference contour.",
+  "support": "Bonded effective frame: EA = k R_s^2; EI = EA h^2 / 12. Each group is stress free at installation."
+}
